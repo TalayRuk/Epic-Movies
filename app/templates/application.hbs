@@ -1,4 +1,4 @@
-<div class="container">
+<div class="containerN">
   <header>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
@@ -7,11 +7,7 @@
           <img class="uc" style="max-width:100px; margin-top: -7px;"
                src="http://www.rowhousecinema.com/webimages/mainlogo.png">
         </div>
-        <ul class="nav navbar-nav">
-          <li class="lin"><a class="glyphicon glyphicon-home" href="/"></a></li>
-          <li class="lin">{{#link-to 'about'}}About{{/link-to}}</li>
-         <li class="lin">{{#link-to 'contact'}}Contact{{/link-to}}</li>
-      </ul>
+        <h1 class="htitle">Row House Movie Finder</h1>
       <form class = "navbar-form navbar-right">
         <input type="text" class="form-control" placeholder="enter zip code">
       </form>
@@ -19,7 +15,13 @@
     </nav>
   </header>
 </div>
-    <h3></h3>
-    <hr>
-    <br>
   {{outlet}}
+  <footer>
+    <hr>
+    <ul class="nav navbar-nav">
+      <li class="lin"><a class="glyphicon glyphicon-home" href="/"></a></li>
+      <li class="lin">{{#link-to 'about'}}About{{/link-to}}</li>
+      <li class="lin">{{#link-to 'contact'}}Contact{{/link-to}}</li>
+    </ul>
+
+  </footer>
