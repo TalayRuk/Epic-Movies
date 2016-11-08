@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  name: "peter",
   actions: {
-    post(contact) {
+    post() {
       if (confirm('Your information has been sent.')){
-        this.sendAction('destroyContact', contact);
       }
+      this.set('name', 'hey');
     }
   }
 });
