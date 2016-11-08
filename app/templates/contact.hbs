@@ -13,7 +13,7 @@
       <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
     </fieldset>
     <fieldset>
-      {{#link-to "index"}}<button name="submit" type="submit" >Submit</button>{{/link-to}}
+      <button {{action 'post' contact}} name="submit" type="submit" >Submit</button>
     </fieldset>
   </form>
 </div>
