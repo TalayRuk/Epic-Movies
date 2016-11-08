@@ -1,1 +1,20 @@
-{{outlet}}
+<!-- For Search box in Nav-bar where should it be located -->
+{{theater-lookup findTheater="findTheater"}}
+<hr>
+<h1>home page</h1>
+<hr>
+<div class="carousel">
+  {{index-carousel}}
+</div>
+<hr>
+{{poster-tile}}
+<hr>
+
+remove this list from index
+<div class="row">
+  <div class="col-xl-2">
+    {{#each model as |demo|}}
+      <a href="{{demo.name}}"><img src="{{demo.image}}" alt="{{demo.name}}" /></a>
+    {{/each}}
+  </div>
+</div>
