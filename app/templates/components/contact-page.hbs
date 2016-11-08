@@ -1,0 +1,23 @@
+
+  <h2 class="cpage">Contact Page</h2>
+  <p class="ppage">Questions or Concerns? sumbit your info and well get back to you promptly</p>
+  
+<div class="container-nav">
+  <form class="contact" action="" method="post">
+    <h3>Row House Movies</h3>
+    <h4>Contact us</h4>
+    <fieldset>
+      {{input placeholder="Name" value=name  type="text" }}
+    </fieldset>
+    <fieldset>
+      {{input placeholder="Your Email Address" value=email type="email" }}
+    </fieldset>
+    <fieldset>
+
+      {{textarea placeholder="Type your message here...." value=message}}
+    </fieldset>
+    <fieldset>
+      <button {{action 'post' contact-page}} name="submit" type="submit" >Submit</button>
+    </fieldset>
+  </form>
+</div>
