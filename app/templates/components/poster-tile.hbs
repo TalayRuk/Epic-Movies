@@ -2,8 +2,19 @@ poster-tile
 <div class="row">
   <div class="col-xl-2">
     {{#each model as |demo|}}
-      <a href="{{demo.name}}"><img src="{{demo.image}}" alt="{{demo.name}}" /></a>
+      <a href="{{demo.name}}"><img class="poster" src="{{demo.image}}" alt="{{demo.name}}" /></a>
     {{/each}}
   </div>
 </div>
  this will work if we want to impliment a movie model.
+
+
+
+ <form>
+   <div class="form-group">
+     <label for="newMovie">Movie Title</label>
+     {{input value=newMovie id="newMovie"}}
+   </div>
+
+   <button class="btn btn-primary" {{action "addNewMovie"}}>Add This Movie</button>
+ </form>

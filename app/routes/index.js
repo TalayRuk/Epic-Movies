@@ -29,6 +29,9 @@ export default Ember.Route.extend({
     findTheater(params) {
       //to search theater on nav
       this.transitionTo('theaters', params.postalcode);
+    },
+    addNewMovie(params) {
+      this.transitionTo('addMovieToDB', params.newMovie);
     }
   }
 });
