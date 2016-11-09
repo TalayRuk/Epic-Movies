@@ -3,7 +3,8 @@
   {{#each model as |theater|}}
 
    {{theater.title}}
-   <img src="{{theater.preferredImage.uri}}" alt="" />
+   <div class="tile"><img src="http://developer.tmsimg.com/'+{{theater.preferredImage.uri}}" alt="{{theater.showtimes.theatre.name}}" >
+     </div>
    <ul>
       {{#each theater.showtimes as |showtimes|}}
         <li>
@@ -13,3 +14,5 @@
     {{/each}}
   </ul>
   {{/each}}
+
+<!-- <div class="tile"><img src="http://developer.tmsimg.com/' + movie.preferredImage.uri + '?api_key='+apikey+'"><br/>'; -->
