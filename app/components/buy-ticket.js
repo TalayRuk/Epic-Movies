@@ -20,10 +20,10 @@ export default Component.extend({
   }),
   seniorTicketPrice: computed('seniorTicket', function() {
     var price = this.get('seniorTicket') * 6.50;
-    return {price};
+    return price;
   }),
   totalPrice: computed('adultTicketPrice', 'childTicketPrice', 'seniorTicketPrice', function(){
-    return this.get('adultTicketPrice') + this.get('childTicketPrice') ;
+    return this.get('adultTicketPrice') + this.get('childTicketPrice') + this.get('seniorTicketPrice');
   }),
 
   actions: {
