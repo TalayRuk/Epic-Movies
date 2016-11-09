@@ -1,0 +1,23 @@
+<br><br>
+{{model.Title}}<br>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input id="title" value=model.Title}}
+      </div>
+
+      <div class="form-group">
+        <label for="poster">Poster image</label>
+        {{input id="poster" value=model.Poster}}
+      </div>
+
+      <div class="form-group">
+        <label for="year">Realease Date</label>
+        {{input id="year" value=model.Year}}
+      </div>
+
+      <div class="form-group">
+        <label for="rated">Rated</label>
+        {{input id="rated" value=model.Rated}}
+      </div>
+
+<button {{action "saveMovieToDB"}}>Add To DataBase</button>

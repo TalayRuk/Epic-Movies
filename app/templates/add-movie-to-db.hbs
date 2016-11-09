@@ -9,29 +9,7 @@
   </div>
 
   <div class="col-md-5">
-
-    <br><br><br>
-          <div class="form-group">
-            <label for="title">Title</label>
-            {{input value=title id="title" placeholder=model.Title}}
-          </div>
-
-          <div class="form-group">
-            <label for="poster">Poster image</label>
-            {{input value=poster id="poster" placeholder=model.Poster}}
-          </div>
-
-          <div class="form-group">
-            <label for="year">Realease Date</label>
-            {{input value=year id="year" placeholder=model.Year}}
-          </div>
-
-          <div class="form-group">
-            <label for="rated">Rated</label>
-            {{input value=rated id="rated" placeholder=model.Rated}}
-          </div>
-
-    <button>Add To DataBase</button>
+    {{commit-a-movie model=model saveMovieToDB="saveMovieToDB"}}
   </div>
 
 </div>
