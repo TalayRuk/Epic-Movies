@@ -1,7 +1,9 @@
+# Theater api sign up website https://secure.mashery.com/login/developer.tmsapi.com/
 # Epic-movies
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+
 
 ## Prerequisites
 
