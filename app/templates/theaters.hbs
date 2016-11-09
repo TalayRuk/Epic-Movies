@@ -1,15 +1,15 @@
 
-<h3>Here are the Theater in {{model.theater.zip}} and the showtime</h3>
+<h3>Here are the Theater in {{model.zip}} and the showtime</h3>
 
-{{#each model as |theater|}}
+{{#each model.theater as |theater|}}
 
 <h2>{{theater.title}}</h2>
-{{!-- {{ <div class="tile"><img src="http://developer.tmsimg.com/'+{{theater.preferredImage.uri" alt="{{theater.showtimes.theatre.name" >
-</div> ----}}
+
   <ul>
     {{#each theater.showtimes as |showtimes|}}
-      {{#if }}{{showtimes.theatre.name}}
+      {{showtimes.theatre.name}}
       {{buy-ticket showtimes=showtimes}}
     {{/each}}
   </ul>
 {{/each}}
+ 

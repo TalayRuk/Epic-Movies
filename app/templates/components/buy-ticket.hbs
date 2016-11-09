@@ -4,6 +4,8 @@
 <br>Child $8.00 x {{input type="number" value=childTicket}} = ${{childTicketPrice}}.00
 <br>Senior $6.50 x {{input type="number" value=seniorTicket}} = ${{seniorTicketPrice}}.00
 <br>Total: ${{totalPrice}}.00
+<br>
+<button class="btn-danger btn-sm"{{action 'buyTicket' ticket}}>Buy</button>
 {{else}}
 <button class="btn btn-sm btn-success" {{action 'showBuy'}}>{{showtimes.dateTime}}</button>
 {{/if}}

@@ -32,6 +32,9 @@ export default Component.extend({
     },
     hideBuy(){
       this.set('wantBuy', false);
+    },
+    buyTicket(){
+      // this.get('buyTicket', ticket);
     }
   }
 
