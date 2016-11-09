@@ -27,7 +27,8 @@ export default Component.extend({
   }),
   time: computed('showtimes',function(){
     var time = new Date(this.get('showtimes.dateTime'));
-    if (time.getMinutes() === 0){ var timeMinutes = '00';} else {var timeMinutes = time.getMinutes()}
+    var timeMinutes;
+    if (time.getMinutes() === 0){ timeMinutes = '00';} else {timeMinutes = time.getMinutes(); }
     return `${time.getHours()}:${timeMinutes} pm` ;
   }),
 
