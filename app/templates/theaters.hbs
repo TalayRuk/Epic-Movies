@@ -7,9 +7,8 @@
 
   <ul>
     {{#each theater.showtimes as |showtimes|}}
-      {{showtimes.theatre.name}}
+
       {{buy-ticket showtimes=showtimes}}
     {{/each}}
   </ul>
 {{/each}}
- 
