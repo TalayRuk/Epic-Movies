@@ -209,8 +209,7 @@ p {
   position: relative;
 }
 
-
-img {
+.poster {
   align: center;
   height: 400px;
   width: 250px;
