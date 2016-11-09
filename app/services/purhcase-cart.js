@@ -6,17 +6,15 @@ export default Ember.Service.extend({
   add(ticket) {
     this.get('tickets').pushObject(ticket);
   }
-
 });
 
-addATicket(){
+
+
+
+add(tickets) {
   var ticket = {
-    title: this.get('title'),
-    cost: this.get('cost'),
+    this.get('title'),
+    this.get('cost'),
     this.get('quantity'),
     this.get('type'),
   };
-  add(ticket);
-}
-
-//

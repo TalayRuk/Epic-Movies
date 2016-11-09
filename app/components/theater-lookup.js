@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     //when user enter zipcode in the nav-bar this should locate the theater
     findTheater() {
       var params = {
-        postalcode: this.get('postalcode')
+        zip: this.get('zip')
       };
       this.sendAction('findTheater', params);
     }

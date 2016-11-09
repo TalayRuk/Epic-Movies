@@ -1,8 +1,15 @@
-<h3>Here are the Thearter in {{theater.postalcode}} and the showtime</h3>
-<ul>
+<h3>Here are the Thearter in {{theater.zip}} and the showtime</h3>
+
   {{#each model as |theater|}}
 
-    <li> {{theater.name}} <br>
-       </li>
+   {{theater.title}}
+   <img src="{{theater.preferredImage.uri}}" alt="" />
+   <ul>
+      {{#each theater.showtimes as |showtimes|}}
+        <li>
+          {{showtimes.theatre.name}}
+          {{buy-ticket showtimes=showtimes}}
+        </li>
+    {{/each}}
+  </ul>
   {{/each}}
-</ul>
