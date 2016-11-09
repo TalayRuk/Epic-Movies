@@ -6,6 +6,7 @@ const {
 } = Ember;
 
 export default Component.extend({
+  ticketService : Ember.inject.service('purchase-cart'),
   wantbuy: false,
   adultTicket: 0,
   childTicket: 0,
@@ -20,10 +21,10 @@ export default Component.extend({
   }),
   seniorTicketPrice: computed('seniorTicket', function() {
     var price = this.get('seniorTicket') * 6.50;
-    return {price};
+    return price;
   }),
   totalPrice: computed('adultTicketPrice', 'childTicketPrice', 'seniorTicketPrice', function(){
-    return this.get('adultTicketPrice') + this.get('childTicketPrice') ;
+    return this.get('adultTicketPrice') + this.get('childTicketPrice') + this.get('seniorTicketPrice') ;
   }),
 
   actions: {
@@ -32,7 +33,14 @@ export default Component.extend({
     },
     hideBuy(){
       this.set('wantBuy', false);
+    },
+    purchaseTicket(){
+      var ticket = {
+        name: '1001 Dalmations'
+      };
+      this.ticketService.add(ticket);
     }
+
   }
 
 });
