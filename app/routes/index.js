@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     //This may need to move depending on where the route handler need to be for the nav-bar
     findTheater(params) {
       //to search theater on nav
-      this.transitionTo('theaters', params.postalcode);
+      this.transitionTo('theaters', params.zip);
     },
     addNewMovie(params) {
       this.transitionTo('addMovieToDB', params.newMovie);
