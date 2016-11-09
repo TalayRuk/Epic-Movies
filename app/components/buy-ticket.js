@@ -34,11 +34,8 @@ export default Component.extend({
     hideBuy(){
       this.set('wantBuy', false);
     },
-    purchaseTicket(){
-      var ticket = {
-        name: '1001 Dalmations'
-      };
-      this.ticketService.add(ticket);
+    purchaseTicket(ticket){
+      this.get('purchaseCart').add(ticket);
     }
 
   }
