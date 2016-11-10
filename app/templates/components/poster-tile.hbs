@@ -2,7 +2,7 @@ poster-tile
 <div class="row">
   <div class="col-xl-2">
     {{#each model as |movie|}}
-      <a href="{{movie.name}}"><img class="poster" src="{{movie.Poster}}" alt="{{movie.name}}" /></a>
+      {{#link-to "movie-display" movie.id}}<img class="poster" src="{{movie.Poster}}" alt="{{movie.name}}" />{{/link-to}}
     {{/each}}
   </div>
 </div>
