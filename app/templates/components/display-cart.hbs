@@ -1,7 +1,8 @@
+Purchase
 {{#each purchaseCart.tickets as |ticket|}}
  adult: {{ticket.adult}}
  child: {{ticket.child}}
  senior: {{ticket.senior}}
  total: ${{ticket.totalPrice}}.00<br>
- <button class="btn btn-primary" {{action 'deleteTicket' ticket}}>Delete Ticket</button>
+ <button class="btn btn-primary" {{action 'deleteTick' ticket}}>Delete Ticket</button>
  {{/each}}
