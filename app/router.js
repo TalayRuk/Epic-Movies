@@ -13,6 +13,7 @@ Router.map(function() {
   //path = dynamic segment which contain the zip code we gathered from the user
   //now we need to go to theaters.js to return API Data in a model hook
   this.route('addMovieToDB', {path: '/addMovieToDB/:newMovie'});
+  this.route('checkout');
 });
 
 export default Router;

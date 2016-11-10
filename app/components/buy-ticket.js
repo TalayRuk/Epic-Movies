@@ -6,6 +6,7 @@ const {
 } = Ember;
 
 export default Component.extend({
+  ticketService : Ember.inject.service('purchase-cart'),
   wantbuy: false,
   adultTicket: 0,
   childTicket: 0,
@@ -24,6 +25,13 @@ export default Component.extend({
   }),
   totalPrice: computed('adultTicketPrice', 'childTicketPrice', 'seniorTicketPrice', function(){
     return this.get('adultTicketPrice') + this.get('childTicketPrice') + this.get('seniorTicketPrice');
+
+  }),
+  time: computed('showtimes',function(){
+    var time = new Date(this.get('showtimes.dateTime'));
+    var timeMinutes;
+    if (time.getMinutes() === 0){ timeMinutes = '00';} else {timeMinutes = time.getMinutes(); }
+    return `${time.getHours()}:${timeMinutes} pm` ;
   }),
 
   actions: {
@@ -32,6 +40,15 @@ export default Component.extend({
     },
     hideBuy(){
       this.set('wantBuy', false);
+    },
+    purchaseTicket(){
+      var ticket = {
+        totalPrice: this.get('totalPrice'),
+        adult:this.get('adultTicket'),
+        child: this.get('childTicket'),
+        senior: this.get('seniorTicket'),
+      };
+      this.get('ticketService').add(ticket);
     }
   }
 
