@@ -2,7 +2,6 @@
  adult: {{ticket.adult}}
  child: {{ticket.child}}
  senior: {{ticket.senior}}
- total: ${{ticket.totalPrice}}.00
- <button>
-
+ total: ${{ticket.totalPrice}}.00<br>
+ <button class="btn btn-primary" {{action 'deleteTicket' ticket}}>Delete Ticket</button>
  {{/each}}
