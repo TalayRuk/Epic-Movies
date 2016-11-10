@@ -25,6 +25,12 @@ export default Component.extend({
   totalPrice: computed('adultTicketPrice', 'childTicketPrice', 'seniorTicketPrice', function(){
     return this.get('adultTicketPrice') + this.get('childTicketPrice') + this.get('seniorTicketPrice');
   }),
+  time: computed('showtimes',function(){
+    var time = new Date(this.get('showtimes.dateTime'));
+    var timeMinutes;
+    if (time.getMinutes() === 0){ timeMinutes = '00';} else {timeMinutes = time.getMinutes(); }
+    return `${time.getHours()}:${timeMinutes} pm` ;
+  }),
 
   actions: {
     showBuy(){
@@ -32,7 +38,8 @@ export default Component.extend({
     },
     hideBuy(){
       this.set('wantBuy', false);
-    }
+    },
+
   }
 
 });
