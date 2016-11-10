@@ -1,9 +1,10 @@
 
-<h3>Here are the Theater in {{model.theater.zip}} and the showtime</h3>
+<h3>Here are the Theater in {{model.zip}} and the showtime</h3>
+
 
 {{display-cart}}
 
-{{#each model as |theater|}}
+{{#each model.theater as |theater|}}
 
 <h2>{{theater.title}}</h2>
   <ul>
