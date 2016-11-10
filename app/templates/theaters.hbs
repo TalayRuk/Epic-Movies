@@ -4,5 +4,11 @@
 {{#each model.theater as |theater|}}
 
 <h2>{{theater.title}}</h2>
-  {{buy-ticket theshowtimes=theater.showtimes}}
+
+  <ul>
+    {{#each theater.showtimes as |showtimes|}}
+
+      {{buy-ticket showtimes=showtimes}}
+    {{/each}}
+  </ul>
 {{/each}}
