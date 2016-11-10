@@ -25,6 +25,7 @@ export default Component.extend({
   }),
   totalPrice: computed('adultTicketPrice', 'childTicketPrice', 'seniorTicketPrice', function(){
     return this.get('adultTicketPrice') + this.get('childTicketPrice') + this.get('seniorTicketPrice');
+
   }),
 
   actions: {
@@ -34,8 +35,14 @@ export default Component.extend({
     hideBuy(){
       this.set('wantBuy', false);
     },
-    purchaseTicket(ticket){
-      this.get('purchaseCart').add(ticket);
+    purchaseTicket(){
+      var ticket = {
+        totalPrice: this.get('totalPrice'),
+        adult:this.get('adultTicket'),
+        child: this.get('childTicket'),
+        senior: this.get('seniorTicket'),
+      };
+      this.get('ticketService').add(ticket);
     }
 
   }

@@ -1,4 +1,7 @@
 {{#each purchaseCart.tickets as |ticket|}}
- {{ticket.title}}{{ticket.adultTicket}}{{ticket.childTicket}}
- {{ticket.seniorTicket}}
+ adult: {{ticket.adult}}
+ child: {{ticket.child}}
+ senior: {{ticket.senior}}
+ total: ${{ticket.totalPrice}}.00
+
  {{/each}}

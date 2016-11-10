@@ -5,6 +5,5 @@ export default Ember.Service.extend({
 
   add(ticket) {
     this.get('tickets').pushObject(ticket);
-    console.log(ticket);
   }
 });
