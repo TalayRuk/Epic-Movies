@@ -8,6 +8,7 @@ export default Ember.Component.extend({
         Poster: this.get('model.Poster'),
         Year: this.get('model.Year'),
         Rated: this.get('model.Rated'),
+        Video: this.get('model.Video'),
       };
       this.sendAction('saveMovieToDB', params);
     }
