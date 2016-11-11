@@ -6,7 +6,8 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       get theater() {
 
-        var url = 'http://data.tmsapi.com/v1.1/movies/showings?startDate=2016-11-10&api_key=tgq7sdn5xsx2zr3ccp9344yf&zip=98104';
+        var url = 'http://data.tmsapi.com/v1.1/movies/showings?startDate=2016-11-10&api_key=ryhrbug5pq4222vswnsd48z2&zip='+ params.zip;
+
 
         return Ember.$.getJSON(url).then(function(responseJSON) {
           console.log(responseJSON);
